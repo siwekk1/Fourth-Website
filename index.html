@@ -2,25 +2,39 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8"/>
-<title>Chuj wie</title>
+<title>Pokaz slajdów</title>
 <meta name="description" content="Nowy projekt"/>
 <meta name="keywords" content="stronka, nowa, trzecia"/>
 <link rel="stylesheet" href="style.css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rouge+Script&display=swap" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="jquery.scrollTo.min.js"></script>
+
+<script>
+    JQuery(function($)
+    {
+        $.scrollTo(0);
+        $('#link3').click(function() { $.scrollTo($('#monitorycrt'), 1); });
+    }
+    );
+
+</script>
 </head>
 <body>
 <!--Tworzenie loga górny pasek-->
 <div id="logo">
 Wykład #1: Monitory komputerowe
 </div>
+
+<a href="#" class="scrollup"></a>
 <!--Container-->
 <div id="container"> 
 <div id="spis">
 
     <ol class="chapters">
-        <li>Monitory kineskopowe CRT
+        <li><a id="link3" href="#"> Monitory kineskopowe CRT</a>
             <ul>
                 <li>Budowa monitora</li>
                 <li>Zasada działania</li>
@@ -29,7 +43,7 @@ Wykład #1: Monitory komputerowe
                 <li>Dobór parametrów</li>
             </ul>
         </li>
-        <li>Monitory ciekłokrystaliczne LCD
+        <li><a href="#monitorylcd"> Monitory ciekłokrystaliczne LCD </a>
             <ul>
                 <li>budowa monitora</li>
                 <li>Zasady działania</li>
@@ -39,14 +53,14 @@ Wykład #1: Monitory komputerowe
 
             </ul>
         </li>
-        <li>Sposoby podłączenia monitorów
+        <li><a href="#polaczenia"> Sposoby podłączenia monitorów</a>
             <ul>
                 <li>DSUB</li>
                 <li>DVI</li>
                 <li>HDMI, Display Port</li>
             </ul>
         </li>
-        <li>Dodatkowe informacje
+        <li><a href="#dodinfo">Dodatkowe informacje </a>
             <ul>
                 <li>Przyszłość monitorów i wyświetlaczy</li>
                 <li>Wykorzystane źródła</li>
@@ -60,7 +74,7 @@ Wykład #1: Monitory komputerowe
 		
 		<div class="slajd">
 		
-			<h1>Budowa monitora CRT</h1>
+			<h1 id="monitorycrt">Budowa monitora CRT</h1>
 			
 			CRT to akronim od <strong>Cathode-Ray Tube</strong>, czyli lampy kineskopowej wyposażonej w działo elektronowe. W języku polskim pod tym słowem przyjęto potoczną nazwę skrótową, synonim dla wyrażenia monitor CRT – czyli oznaczenie modeli monitorów komputerowych, których wyświetlacz oparty jest na lampie obrazowej zwanej kineskopem. Właściwe określenie to monitor kineskopowy.
 			<br /><br />
@@ -250,7 +264,7 @@ Wykład #1: Monitory komputerowe
 		
 		<div class="slajd">
 		
-			<h1>Budowa monitora LCD</h1>
+			<h1 id="monitorylcd"> Budowa monitora LCD</h1>
 			
 			LCD to akronim od Liquid Crystal Display - wyświetlacz ciekłokrystaliczny to urządzenie, którego zasada działania oparta jest na zmianie polaryzacji światła na skutek zmian orientacji cząsteczek ciekłego kryształu pod wpływem przyłożonego pola elektrycznego.
 			<br /><br />
@@ -449,7 +463,7 @@ Wykład #1: Monitory komputerowe
 		
 		<div class="slajd">
 		
-			<h1>Złącze analogowe DSUB (VGA)</h1>
+			<h1 id="polaczenia">Złącze analogowe DSUB (VGA)</h1>
 			
 			Złącze popularne w czasach monitorów CRT - niepożądane w monitorze LCD, ponieważ zachodzi wówczas dwukrotna konwersja sygnału: zamiana sygnału cyfrowego na analogowy w karcie graficznej oraz sygnału analogowego na cyfrowy w monitorze. Podwójna konwersja powoduje straty w jakości obrazu i zwiększa podatność na zakłócenia. Nazwa DSUB pochodzi od rodzaju złącz przypominających kształtem położoną literę D. Inna nazwa to VGA (od trybu graficznego).
 			<br /><br />
@@ -549,7 +563,7 @@ Wykład #1: Monitory komputerowe
 		
 		<div class="slajd">
 		
-			<h1>Przyszłość monitorów i wyświetlaczy?</h1>
+			<h1 id="dodinfo">Przyszłość monitorów i wyświetlaczy?</h1>
 			
 			Producenci wciąż prześcigają się w tworzeniu nowych technologii, które zapewnią jeszcze lepsze parametry wyświetlanego obrazu, a jednocześnie mniejsze koszty produkcji. Jaka technologia opanuje rynek w najbliższej przyszłości? Jakie znamy nowatorskie metody budowy wyświetlaczy?
 			<br /><br />
