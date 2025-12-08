@@ -71,3 +71,8 @@ ol.chapters > li > ul > li:before{
     content: "¥";
     margin-right: 5px;
 }
+.slajd{
+padding: 20px 40px;
+text-align: justify;
+
+}
